@@ -6,7 +6,7 @@
  * Return: returns 0 if success or 1 if failure
  */
 
-int execute()
+int execute(void)
 {
 	int i;
 	instruction_t instructions[] = {
@@ -17,7 +17,8 @@ int execute()
 
 	data.opcode = strtok(data.line, " \n\t");
 	data.arg = strtok(NULL, " \n\t");
-	if (!data.opcode || data.opcode[0] == '#') {
+	if (!data.opcode || data.opcode[0] == '#')
+	{
 		return (1);
 	}
 
@@ -29,6 +30,8 @@ int execute()
 			return (0);
 		}
 	}
-	fprintf(stderr, "L%d: unknown instruction %s\n", data.line_count, data.opcode);
+	fprintf(
+		stderr, "L%d: unknown instruction %s\n", data.line_count, data.opcode
+	);
 	return (1);
 }

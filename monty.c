@@ -30,7 +30,7 @@ int main(int argc, char **argv)
 	}
 	else
 	{
-		while(fgets(buff, 1024, file))
+		while (fgets(buff, 1024, file))
 		{
 			data.line = buff;
 			data.line_count++;

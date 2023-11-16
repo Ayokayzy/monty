@@ -1,5 +1,11 @@
 #include "monty.h"
 
+/**
+ * op_push - pushes data to the stack
+ * @stack: the stack for storing values
+ * @line_number: line being read
+ */
+
 void op_push(stack_t **stack, unsigned int line_number)
 {
 	stack_t *node, *top;
@@ -35,6 +41,13 @@ void op_push(stack_t **stack, unsigned int line_number)
 		*stack = node;
 	}
 }
+
+/**
+ * op_pall - prints all the data in a stack
+ * @stack: the stack for storing values
+ * @line_number: line being read
+ */
+
 
 void op_pall(stack_t **stack, unsigned int line_number)
 {
