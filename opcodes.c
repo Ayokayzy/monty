@@ -13,7 +13,11 @@ void op_push(stack_t **stack, unsigned int line_number)
 
 	node = malloc(sizeof(stack_t));
 	if (node == NULL)
+	{
+		fprintf(stderr, "Error: malloc failed");
 		exit(EXIT_FAILURE);
+	}
+
 	node->n = atoi(data.arg);
 	node->next = NULL;
 

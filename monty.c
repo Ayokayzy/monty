@@ -18,17 +18,14 @@ int main(int argc, char **argv)
 
 	if (argc != 2)
 	{
-		write(1, "USAGE: monty file\n", 18);
+		fprintf(stderr, "USAGE: monty file\n");
 		exit(EXIT_FAILURE);
 	}
 
 	file = fopen(argv[1], "r");
 	if (file == NULL)
 	{
-		
-		write(1, "Error: Can't open file ", 24);
-		write(1, argv[1], strlen(argv[1]));
-		write(1, "\n", 1);
+		fprintf(stderr, "Error: Can't open file %s\n", argv[1]);
 		exit(EXIT_FAILURE);
 	}
 	else
@@ -40,11 +37,6 @@ int main(int argc, char **argv)
 			status = execute();
 			if (status == 1)
 			{
-				write(1, "L", 2);
-				write(1, "num", 4);
-				write(1, ": unknown instruction", 22);
-				write(1, data.opcode, strlen(data.opcode));
-				write(1, "\n", 2);
 				exit(EXIT_FAILURE);
 			}
 

@@ -29,5 +29,6 @@ int execute()
 			return (0);
 		}
 	}
+	fprintf(stderr, "L%d: unknown instruction %s\n", data.line_count, data.opcode);
 	return (1);
 }
