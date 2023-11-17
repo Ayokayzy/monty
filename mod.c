@@ -1,8 +1,8 @@
 #include "monty.h"
 
 /**
- * op_mod - computes the rest of the division of the second 
- * top element of the stack by the top element of the stack.
+ * op_mod - This computes the rest of the division of the second
+ * top element of the stack by the top element of the stack
  * @stack: the stack
  * @line_number: line number
  */
