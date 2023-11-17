@@ -61,5 +61,9 @@ void op_mod(stack_t **stack, unsigned int line_number);
 int is_int(char *s);
 int execute();
 void free_stack(stack_t **stack);
+void op_pstr(stack_t **head, unsigned int line_number);
+void op_pchar(stack_t **head, unsigned int line_number);
+void op_rotl(stack_t **head, __attribute__((unused)) unsigned int counter);
+void op_rotr(stack_t **head, __attribute__((unused)) unsigned int line_number);
 
-#endif
+#endif /* MONTY_H */

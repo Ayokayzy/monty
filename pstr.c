@@ -3,16 +3,15 @@
 /**
  * op_pstr - This prints the string starting at the top of the stack
  * followed by a new line.
- * @head: Stack head
- * @counter: line_number
- * Return: no return
+ * @stack: Stack head
+ * @line_number: line_number in the monty file
  */
-void op_pstr(stack_t **head, unsigned int counter)
+void op_pstr(stack_t **stack, unsigned int line_number)
 {
 	stack_t *h;
-	(void)counter;
+	(void)line_number;
 
-	h = *head;
+	h = *stack;
 	while (h)
 	{
 		if (h->n > 127 || h->n <= 0)
