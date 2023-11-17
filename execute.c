@@ -19,7 +19,7 @@ int execute(void)
 	data.arg = strtok(NULL, " \n\t");
 	if (!data.opcode || data.opcode[0] == '#')
 	{
-		return (1);
+		return (0);
 	}
 
 	for (i = 0; instructions[i].opcode; i++)

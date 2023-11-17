@@ -42,5 +42,6 @@ int main(int argc, char **argv)
 
 		}
 	}
+	free_stack(&data.stack);
 	return (0);
 }
