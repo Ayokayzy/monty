@@ -17,6 +17,7 @@ int execute(void)
 		{"swap", op_swap},
 		{"add", op_add},
 		{"sub", op_sub},
+		{"div", op_div},
 		{"nop", op_nop},
 		{NULL, NULL}
 	};
