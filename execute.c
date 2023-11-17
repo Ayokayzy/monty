@@ -16,6 +16,7 @@ int execute(void)
 		{"pop", op_pop},
 		{"swap", op_swap},
 		{"add", op_add},
+		{"sub", op_sub},
 		{"nop", op_nop},
 		{NULL, NULL}
 	};
