@@ -15,6 +15,7 @@ int execute(void)
 		{"pint", op_pint},
 		{"pop", op_pop},
 		{"add", op_add},
+		{"nop", op_nop},
 		{NULL, NULL}
 	};
 
