@@ -13,6 +13,7 @@ int execute(void)
 		{"push", op_push},
 		{"pall", op_pall},
 		{"pint", op_pint},
+		{"pop", op_pop},
 		{NULL, NULL}
 	};
 

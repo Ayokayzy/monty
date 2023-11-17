@@ -49,15 +49,13 @@ void op_push(stack_t **stack, unsigned int line_number)
  */
 
 
-void op_pall(stack_t **stack, unsigned int line_number)
+void op_pall(stack_t **stack, unsigned int line_number __attribute__((unused)))
 {
 	stack_t *current;
 
-	if (!stack || !*stack)
+	if (!*stack)
 	{
-		fprintf(stderr, "L%d: Stack empty %s\n", line_number,
-			data.opcode);
-		exit(EXIT_FAILURE);
+		return;
 	}
 
 	current = *stack;
