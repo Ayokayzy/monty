@@ -22,12 +22,13 @@ void op_sub(stack_t **stack, unsigned int line_number)
 		}
 	}
 
-	temp = *stack;
 	if (i < 2)
 	{
 		fprintf(stderr, "L%d: can't add, stack too short\n", line_number);
 		exit(EXIT_FAILURE);
 	}
+
+	temp = *stack;
 
 	*stack = (*stack)->prev;
 	(*stack)->n = (*stack)->n - temp->n;
