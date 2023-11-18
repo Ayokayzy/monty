@@ -10,7 +10,7 @@ void op_rotr(stack_t **stack, __attribute__((unused)) unsigned int line_number)
 	stack_t *copy, *last;
 
 	copy = *stack;
-	if (!*stack || !stack)
+	if (!*stack || !stack || !(*stack)->prev)
 	{
 		return;
 	}

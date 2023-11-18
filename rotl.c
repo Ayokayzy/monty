@@ -15,7 +15,7 @@ void op_rotl(stack_t **stack, __attribute__((unused)) unsigned int counter)
 		return;
 	}
 
-	if (temp->prev == NULL || temp->prev->prev == NULL)
+	if (temp->prev == NULL)
 	{
 		return;
 	}
