@@ -10,7 +10,7 @@ void op_rotl(stack_t **stack, __attribute__((unused)) unsigned int counter)
 {
 	stack_t *temp = *stack, *auxi;
 
-	if (*stack == NULL)
+	if (!*stack || !stack)
 	{
 		return;
 	}
