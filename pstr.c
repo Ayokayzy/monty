@@ -19,7 +19,7 @@ void op_pstr(stack_t **stack, unsigned int line_number)
 			break;
 		}
 		printf("%c", h->n);
-		h = h->next;
+		h = h->prev;
 	}
 	printf("\n");
 }

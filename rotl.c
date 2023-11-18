@@ -10,18 +10,18 @@ void op_rotl(stack_t **stack, __attribute__((unused)) unsigned int counter)
 {
 	stack_t *temp = *stack, *auxi;
 
-	if (*stack == NULL || (*stack)->next == NULL)
+	if (*stack == NULL)
 	{
 		return;
 	}
-	auxi = (*stack)->next;
-	auxi->prev = NULL;
-	while (temp->next != NULL)
+	auxi = (*stack)->prev;
+	auxi->next = NULL;
+	data.stack = auxi;
+	while (auxi->prev != NULL)
 	{
-		temp = temp->next;
+		auxi = auxi->prev;
 	}
-	temp->next = *stack;
-	(*stack)->next = NULL;
-	(*stack)->prev = temp;
-	(*stack) = auxi;
+	auxi->prev = temp;
+	temp->next = auxi;
+	temp->prev = NULL;
 }

@@ -7,20 +7,21 @@
  */
 void op_rotr(stack_t **stack, __attribute__((unused)) unsigned int line_number)
 {
-	stack_t *copy;
+	stack_t *copy, *last;
 
 	copy = *stack;
-	if (*stack == NULL || (*stack)->next == NULL)
+	if (*stack == NULL)
 	{
 		return;
 	}
-	while (copy->next)
+	while (copy->prev)
 	{
-		copy = copy->next;
+		copy = copy->prev;
 	}
-	copy->next = *stack;
-	copy->prev->next = NULL;
-	copy->prev = NULL;
-	(*stack)->prev = copy;
-	(*stack) = copy;
+	last = copy->next;
+	last->prev = NULL;
+	(*stack)->next = copy;
+	copy->next = NULL;
+	copy->prev = *stack;
+	data.stack = copy;
 }

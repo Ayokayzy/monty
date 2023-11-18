@@ -21,6 +21,10 @@ int execute(void)
 		{"mul", op_mul},
 		{"mod", op_mod},
 		{"nop", op_nop},
+		{"pchar", op_pchar},
+		{"pstr", op_pstr},
+		{"rotl", op_rotl},
+		{"rotr", op_rotr},
 		{NULL, NULL}
 	};
 
