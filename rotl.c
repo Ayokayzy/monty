@@ -8,22 +8,16 @@
 
 void op_rotl(stack_t **stack, __attribute__((unused)) unsigned int counter)
 {
-	stack_t *temp = *stack, *auxi, *zero_data;
+	stack_t *temp = *stack, *auxi;
 
 	if (!*stack || !stack)
 	{
 		return;
 	}
 
-	if (temp->prev == NULL)
+	if (temp->prev == NULL || temp->prev->prev == NULL)
 	{
-		zero_data = malloc(sizeof(stack_t));
-		temp->next = zero_data;
-		zero_data->prev = temp;
-		zero_data->next = NULL;
-		zero_data->n = 0;
-		*stack = zero_data;
-		temp = *stack;
+		return;
 	}
 	auxi = (*stack)->prev;
 	auxi->next = NULL;
