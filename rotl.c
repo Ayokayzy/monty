@@ -15,7 +15,7 @@ void op_rotl(stack_t **stack, __attribute__((unused)) unsigned int counter)
 		return;
 	}
 
-	if (temp->next == NULL || temp->prev->prev == NULL)
+	if (temp->next == NULL)
 	{
 		zero_data = malloc(sizeof(stack_t));
 		temp->next = zero_data;
